@@ -8,11 +8,21 @@ namespace Course.Entities
         public double ValuePerHour { get; set; }
         public int Hours { get; set; }
 
-        public double TotalValue(double valuePerHour, int hours)
+        public HourContract()
         {
+
+        }
+
+        public HourContract(DateTime date, double valuePerHour, int hours)
+        {
+            Date = date;
             ValuePerHour = valuePerHour;
             Hours = hours;
-            return valuePerHour * hours;
+        }
+
+        public double TotalValue()
+        {
+            return ValuePerHour * Hours; 
         }
     }
 }

@@ -2,8 +2,18 @@
 
 namespace Course.Entities
 {
-    internal class Departament
+     class Departament
     {
-        public string Name { get; set; }
+        public string DeptName { get; set; }
+
+        public Departament()
+        {
+
+        }
+
+        public Departament(string deptName)
+        {
+            DeptName = deptName;
+        }
     }
 }
